@@ -9,7 +9,7 @@ Currently, two official plugins are available:
 
 
 --------------------------------------------------------------to create an project with vite---------------------------------------------------
-npm create vite@latest project-name
-cd project-name
+npm create vite@latest project-name ->
+cd project-name ->
 npm run dev
 --------------------------------------------------------------project is ready to use--------------------------------------------------------------------
