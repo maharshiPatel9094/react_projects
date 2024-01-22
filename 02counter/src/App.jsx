@@ -10,12 +10,20 @@ function App() {
   let [counter,setCounter] = useState(15)  
   // function for adding the value
   const addValue = () =>{
-   setCounter(counter+1)
+    if(counter >= 20){
+      setCounter(0)
+    }else{
+      setCounter(counter+1)
+    }
   }
 
 
   const decreaseValue = () =>{
-    setCounter(counter-1)
+    if(counter <= 0){
+      setCounter(0)
+    }else{
+      setCounter(counter-1)
+    }
   }
 
   return (
