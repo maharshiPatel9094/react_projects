@@ -28,10 +28,11 @@ function App() {
 
   return (
     <>
-      <h1>React Project</h1>
+      <h1>Counter React Project</h1>
       <h2>Counter Value: {counter}</h2>
 
       <button onClick={addValue}>Add Value</button>
+      <br />
       <br />
       <button onClick={decreaseValue}>Decrease Value</button>
 
