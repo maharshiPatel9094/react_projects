@@ -1,22 +1,19 @@
-import {createContext,useContext} from React;
+import {createContext, useContext} from "react"
 
 export const TodoContext = createContext({
-    // properties
     todos: [
         {
-            id:1,
-            todo:"Todo msg",
+            id: 1,
+            todo: " Todo msg",
             completed: false,
         }
     ],
-    // functions
-    // functions definations are written in the app.jsx
-    // all the functions that you need for the app we will define them here and there defination will be wriitten in app.jsx
     addTodo: (todo) => {},
-    updateTodo: (todo,id) => {},
+    updateTodo: (id, todo) => {},
     deleteTodo: (id) => {},
-    toggleComplete: (id) => {},
+    toggleComplete: (id) => {}
 })
+
 
 export const useTodo = () => {
     return useContext(TodoContext)
