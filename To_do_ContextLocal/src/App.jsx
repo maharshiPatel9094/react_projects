@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { TodoProvider } from "./context";
 import "./App.css";
 
@@ -8,20 +8,46 @@ function App() {
   // defining methods of todos
   const addTodo = (todo) => {
     // ...todo => this is called spreading the todo it resembles the other value of todo
-    setTodos((prev)=>[{id: Date.now(),...todo},...prev]);
+    setTodos((prev) => [{ id: Date.now(), ...todo }, ...prev]);
   };
 
-  const updateTodo = (todo,id) => {
-    setTodos((prev)=> prev.map((prevTodo)=>(prevTodo.id === id ? todo : prevTodo )))
-  }
+  const updateTodo = (todo, id) => {
+    setTodos((prev) =>
+      prev.map((prevTodo) => (prevTodo.id === id ? todo : prevTodo))
+    );
+  };
 
-const deleteTodo = (id) => {
-  setTodos((prev) => prev.filter((prevTodo)=>prevTodo.id !== id))
-}
+  const deleteTodo = (id) => {
+    setTodos((prev) => prev.filter((prevTodo) => prevTodo.id !== id));
+  };
 
-const toggleComplete = (id) => {
-  setTodos((prev) => prev.map((prevTodo) => prevTodo === id ? {...prevTodo, completed: ! prevTodo.completed} : prevTodo ))
-}
+  const toggleComplete = (id) => {
+    setTodos((prev) =>
+      prev.map((prevTodo) =>
+        prevTodo === id
+          ? { ...prevTodo, completed: !prevTodo.completed }
+          : prevTodo
+      )
+    );
+  };
+
+  // ======================================================================local storage=============================================================
+  // has main two items only getItem and setItem
+  // local storage data is dent in the form of string so we have to convert it into json format
+  useEffect(() => {
+    const todos = JSON.parse(localStorage.getItem("todos"));
+    if (todos && todos.length > 0) {
+      setTodos(todos);
+    }
+  }, []);
+// setItem takes two values key and value 
+  useEffect(()=>{
+    localStorage.setItem("todos",JSON.stringify(todos))
+  },[todos])
+
+
+
+
 
   return (
     <TodoProvider
