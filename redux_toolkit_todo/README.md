@@ -1,8 +1,16 @@
-# React + Vite
+## redux toolkit
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# step 1 
+- create store 
+ // creating a store is our first step 
+import {configureStore} from "@reduxjs/toolkit";
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+// it takes object 
+export const store = configureStore({})
+
+
+# step 2
+- create reducers
+- main job is to change the things in store 
