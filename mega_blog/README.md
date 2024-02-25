@@ -18,3 +18,6 @@
 -create auth services 
 - create , login , logout
 - the code written for that will be similar for all the apps 
+
+# step-6 
+- create our store
