@@ -5,3 +5,11 @@
 
 # step-2
 - create .env file for the environement variables
+
+# step-2
+- appwrite setup
+- get all the env id
+
+# step-4
+- create a folder config
+- main purpose to store the env url so app dont crash
