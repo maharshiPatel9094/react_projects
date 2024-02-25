@@ -13,3 +13,8 @@
 # step-4
 - create a folder config
 - main purpose to store the env url so app dont crash
+
+# step-5
+-create auth services 
+- create , login , logout
+- the code written for that will be similar for all the apps 
