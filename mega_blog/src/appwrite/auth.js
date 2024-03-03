@@ -1,4 +1,4 @@
-import conf from "../conf.js";
+import conf from "/conf/conf.js";
 import { Client, Account, ID } from "appwrite";
 
 // this is the method how to create the client and account in the appweite
